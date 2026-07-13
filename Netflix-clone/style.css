@@ -1,0 +1,369 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    min-height:100vh;
+    background-image:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("image/hero.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    border-bottom:8px solid #232323;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 180px;
+}
+
+.logo{
+    width:160px;
+    cursor:pointer;
+}
+
+.signin-btn{
+    background:#E50914;
+    color:white;
+    border:none;
+    outline:none;
+    padding:10px 22px;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.signin-btn:hover{
+    background:#c11119;
+}
+
+/* ========================= */
+/* HERO CONTENT */
+/* ========================= */
+
+.content{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.content h1{
+    font-size:70px;
+    font-weight:900;
+    max-width:750px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.content h3{
+    font-size:28px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* ========================= */
+/* EMAIL */
+/* ========================= */
+
+.email-signup{
+    display:flex;
+    gap:12px;
+}
+
+.email-signup input{
+    width:380px;
+    padding:16px;
+    font-size:18px;
+    border:1px solid gray;
+    border-radius:5px;
+    background:rgba(0,0,0,.6);
+    color:white;
+}
+
+.email-signup input::placeholder{
+    color:#b3b3b3;
+}
+
+.email-signup button{
+    background:#E50914;
+    color:white;
+    border:none;
+    padding:16px 30px;
+    font-size:20px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.email-signup button:hover{
+    background:#c11119;
+}
+
+/* ========================= */
+/* FEATURE */
+/* ========================= */
+
+.feature{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 180px;
+    border-bottom:8px solid #232323;
+}
+
+.feature-text{
+    flex-basis:50%;
+}
+
+.feature-text h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.feature-text p{
+    font-size:24px;
+    line-height:1.5;
+}
+
+.feature-image{
+    flex-basis:45%;
+}
+
+.feature-image img{
+    width:100%;
+}
+
+/* ========================= */
+/* FAQ */
+/* ========================= */
+
+.faq{
+    padding:80px 180px;
+    border-bottom:8px solid #232323;
+}
+
+.faq h2{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.faq-box{
+    margin-bottom:12px;
+}
+
+.question{
+    width:100%;
+    padding:25px;
+    border:none;
+    background:#303030;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s;
+}
+
+.question:hover{
+    background:#414141;
+}
+
+.answer{
+    background:#303030;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+    padding:0 25px;
+}
+
+.answer.active{
+    max-height:200px;
+}
+
+.answer p{
+    padding:20px 0;
+    font-size:20px;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:gray;
+    font-size:18px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+    nav{
+        padding:20px;
+    }
+
+    .logo{
+        width:120px;
+    }
+
+    .content h1{
+        font-size:40px;
+    }
+
+    .content h3{
+        font-size:22px;
+    }
+
+    .content p{
+        font-size:18px;
+        padding:0 20px;
+    }
+
+    .email-signup{
+        flex-direction:column;
+        width:90%;
+    }
+
+    .email-signup input{
+        width:100%;
+    }
+
+    .feature{
+        flex-direction:column;
+        text-align:center;
+        padding:60px 20px;
+    }
+
+    .feature-text h2{
+        font-size:38px;
+    }
+
+    .feature-text p{
+        font-size:20px;
+    }
+
+    .faq{
+        padding:60px 20px;
+    }
+
+    .faq h2{
+        font-size:38px;
+    }
+
+    .question{
+        font-size:20px;
+    }
+}
+
+.content{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.logo{
+
+    width:160px;
+
+    cursor:pointer;
+
+    animation:logoZoom 1s ease;
+}
+
+@keyframes logoZoom{
+
+    from{
+        transform:scale(0);
+    }
+
+    to{
+        transform:scale(1);
+    }
+
+}
+
+.signin-btn{
+
+    transition:.3s;
+}
+
+.signin-btn:hover{
+
+    background:#c11119;
+
+    transform:scale(1.05);
+}
+
+.email-signup button{
+
+    transition:.3s;
+}
+
+.email-signup button:hover{
+
+    background:#c11119;
+
+    transform:scale(1.05);
+}
